@@ -350,12 +350,13 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 12px 28px;
+    padding: 18px 50px;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 600;
     transition: all 0.3s;
     border: 2px solid transparent;
+    font-size: 1.4rem;
 }
 
 .btn-resume {
@@ -453,18 +454,27 @@ body {
     background: #111;
 }
 
-.about-img-placeholder {
+.about-img {
     flex: 1;
-    min-height: 400px;
-    background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), rgba(0, 153, 204, 0.1));
-    border-radius: 20px;
-    margin-right: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #00d4ff;
-    font-size: 1.2rem;
-    border: 2px dashed #00d4ff;
+    margin-right: 2rem;
+}
+
+.about-profile-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    border: 4px solid #00d4ff;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.about-profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(0, 212, 255, 0.7);
 }
 
 .about-content {
@@ -499,7 +509,7 @@ body {
 .skills {
     min-height: 100vh;
     padding: 5rem 5%;
-    background: #0a0a0a;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -684,7 +694,7 @@ body {
 .contact-form {
     min-height: 100vh;
     padding: 5rem 5%;
-    background: #111;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -793,6 +803,33 @@ textarea:focus {
     color: #00d4ff;
 }
 
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00d4ff;
+    border-radius: 50%;
+    color: #00d4ff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-social a:hover {
+    background: #00d4ff;
+    color: #0a0a0a;
+    transform: scale(1.1);
+}
+
 .copyright {
     color: #666;
     font-size: 0.9rem;
@@ -841,14 +878,7 @@ textarea:focus {
     }
 }
 
-@keyframes blink {
-    0%, 50% {
-        border-color: #00d4ff;
-    }
-    51%, 100% {
-        border-color: transparent;
-    }
-}
+
 
 @keyframes typing {
     from {
@@ -856,6 +886,15 @@ textarea:focus {
     }
     to {
         width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%, 50% {
+        border-color: #00d4ff;
+    }
+    51%, 100% {
+        border-color: transparent;
     }
 }
 
@@ -1047,10 +1086,13 @@ textarea:focus {
         padding: 3rem 4%;
     }
     
-    .about-img-placeholder {
+    .about-img {
         margin-right: 0;
         margin-bottom: 2rem;
-        min-height: 250px;
+    }
+    
+    .about-profile-img {
+        max-width: 300px;
     }
     
     .about-content h2,
