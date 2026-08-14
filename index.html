@@ -1,383 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raghuram - Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <script src="script.js" defer></script>
-    <script>
-      window.embeddedChatbotConfig = {
-        chatbotId: "OeXcHJZ_o3EdxXVLvT_ZG",
-        domain: "www.chatbase.co",
-      };
-    </script>
-    <!-- <script
-      src="https://www.chatbase.co/embed.min.js"
-      chatbotId="OeXcHJZ_o3EdxXVLvT_ZG"
-      domain="www.chatbase.co"
-      defer
-    ></script> -->
-  </head>
-  <body>
-    <header class="header">
-      <a href="#" class="logo">
-        <div class="logo-container">
-          <div class="logo-icon">
-            <span class="logo-letter">R</span>
-            <div class="logo-dots">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          </div>
-          <span class="logo-text"><span style="color: #00d4ff;">Raghu</span>ram</span>
-        </div>
-      </a>
+    <title>Raghuram G | Software Engineer & Competitive Programmer</title>
+    <meta name="description" content="Raghuram G — Computer Science Engineer, competitive programmer and full-stack developer building practical software and solving complex problems.">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Raghuram G | Software Engineer & Competitive Programmer">
+    <meta property="og:description" content="Raghuram G — Computer Science Engineer, competitive programmer and full-stack developer building practical software and solving complex problems.">
+    <meta property="og:type" content="website">
 
-      <nav class="navbar">
-        <a href="#" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume" onclick="showResume()">Resume</a>
-        <a href="#contact-form">Contact</a>
-      </nav>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">Rg</div>
+                <div class="logo-text">Raghuram<span class="accent-text">.G</span></div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#cp">CP</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://github.com/Raghuram-G01" target="_blank" aria-label="GitHub" class="nav-icon"><i class="bx bxl-github"></i></a>
+                <a href="https://www.linkedin.com/in/raghuram1212007" target="_blank" aria-label="LinkedIn" class="nav-icon"><i class="bx bxl-linkedin"></i></a>
+                <a href="Raghuram_resume_updated (1).pdf" class="btn btn-primary" target="_blank">Resume <i class='bx bx-down-arrow-alt'></i></a>
+                
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <section class="home">
-      <div class="img-box">
-        <img
-          src="about-image.png"
-          alt="Raghuram - Software Developer"
-          class="profile-img"
-        />
-      </div>
-      <div class="home-content">
-        <div class="funky-hello">
-          <span class="funky-letter">H</span>
-          <span class="funky-letter">e</span>
-          <span class="funky-letter">l</span>
-          <span class="funky-letter">l</span>
-          <span class="funky-letter">o</span>
-          <span class="funky-emoji">👋</span>
-        </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <nav>
+            <a href="#home" class="mobile-link" data-target="home">Home</a>
+            <a href="#about" class="mobile-link" data-target="about">About</a>
+            <a href="#skills" class="mobile-link" data-target="skills">Skills</a>
+            <a href="#cp" class="mobile-link" data-target="cp">CP</a>
+            <a href="#projects" class="mobile-link" data-target="projects">Projects</a>
+            <a href="#education" class="mobile-link" data-target="education">Education</a>
+            <a href="#contact" class="mobile-link" data-target="contact">Contact</a>
+        </nav>
+    </div>
 
-        <h1 class="typing-text"><span class="typed-name"></span></h1>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container container">
+            <div class="hero-left fade-in">
+                <div class="badge">
+                    <span class="pulse-dot"></span> Open to Software Engineering Opportunities
+                </div>
+                
+                <h2 class="greeting">Hi, I'm</h2>
+                <h1 class="name-gradient">Raghuram G</h1>
+                
+                <div class="role-tags">
+                    <span>Computer Science Engineer</span>
+                    <span class="dot">•</span>
+                    <span>Competitive Programmer</span>
+                    <span class="dot">•</span>
+                    <span>Full-Stack Developer</span>
+                </div>
 
-        <div class="animated-roles">
-          <div class="role-item typing">
-            Competitive Programmer /
-            <span class="role-blue">Aspiring Software Engineer</span>
-          </div>
-          <div class="inspiring-quote">
-            "Your greatest algorithm is your mindset — optimize it daily."
-          </div>
-        </div>
+                <p class="hero-desc">
+                    I build scalable software, solve complex problems, <br>
+                    and turn ideas into practical products.
+                </p>
 
-        <div class="btn-box">
-          <a href="#" class="btn-secondary" id="resume-btn">Resume</a>
-          <a href="#projects" class="btn-secondary">View Projects</a>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="Raghuram_resume_updated (1).pdf" class="btn btn-outline" target="_blank">View Resume <i class='bx bx-down-arrow-alt'></i></a>
+                </div>
+
+                <div class="hero-social">
+                    <a href="https://github.com/Raghuram-G01" target="_blank" aria-label="GitHub" class="social-btn"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/raghuram1212007" target="_blank" aria-label="LinkedIn" class="social-btn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#contact" aria-label="Email" class="social-btn"><i class="bx bx-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-right fade-in">
+                <div class="profile-wrapper">
+                    <div class="glow-effect"></div>
+                    <div class="profile-image-container">
+                        <img src="image2.png" alt="Raghuram G" class="profile-image">
+                    </div>
+                </div>
+
+                <div class="hero-info-card glass-card">
+                    <div class="info-item">
+                        <i class='bx bxs-graduation info-icon'></i>
+                        <div class="info-text">
+                            <span class="info-title">B.E. CSE</span>
+                            <span class="info-sub">2024 – 2028</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class='bx bx-line-chart info-icon'></i>
+                        <div class="info-text">
+                            <span class="info-title">CGPA</span>
+                            <span class="info-sub">8.92</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class='bx bx-trophy info-icon'></i>
+                        <div class="info-text">
+                            <span class="info-title">Competitive</span>
+                            <span class="info-sub">Programmer</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class='bx bx-code-alt info-icon'></i>
+                        <div class="info-text">
+                            <span class="info-title">Full-Stack</span>
+                            <span class="info-sub">Developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section class="about" id="about">
-      <div class="about-img">
-        <img
-          src="image2.png"
-          alt="About Raghuram"
-          class="about-profile-img"
-        />
-      </div>
-
-      <div class="about-content">
-        <h2>About <span class="highlight">Me</span></h2>
+    <!-- Competitive Programming Section -->
+    <section id="cp" class="section cp-section container">
+        <h2 class="section-title fade-in"><i class='bx bx-code-block'></i> Competitive Programming</h2>
         
-        <div class="passion-quote">"Passion drives my code"</div>
+        <div class="cp-grid">
+            <!-- LeetCode -->
+            <div class="cp-card glass-card fade-in">
+                <div class="cp-icon leetcode-icon">
+                    <i class='bx bx-code-alt'></i>
+                </div>
+                <div class="cp-stats">
+                    <div class="stat-main">650+</div>
+                    <div class="stat-label">Problems Solved</div>
+                    <div class="stat-sub">1732 Peak Rating</div>
+                </div>
+                <div class="cp-platform">LeetCode</div>
+                <a href="https://leetcode.com/u/raghuram_01/" target="_blank" class="cp-link">View Profile <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
 
-        <p class="about-text-animated">
-          I'm <span class="highlight">Raghuram</span>, a passionate developer
-          with strong skills in C, C++, Python, HTML, CSS, and Java,Javascript.
-          Currently pursuing B.E. CSE at Sri Eshwar College of Engineering, I
-          enjoy building efficient and user-friendly applications. I approach
-          challenges with creativity, precision, and a continuous learning
-          mindset. With a growing interest in full-stack development, I strive
-          to deliver impactful and polished solutions.
-        </p>
-      </div>
+            <!-- CodeChef -->
+            <div class="cp-card glass-card fade-in">
+                <div class="cp-icon codechef-icon">
+                    <i class='bx bx-trophy'></i>
+                </div>
+                <div class="cp-stats">
+                    <div class="stat-main">2★</div>
+                    <div class="stat-label">Rating</div>
+                    <div class="stat-sub">CodeChef</div>
+                </div>
+                <div class="cp-platform">CodeChef</div>
+                <a href="https://www.codechef.com/users/raghuram_1201" target="_blank" class="cp-link">View Profile <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+
+            <!-- Codeforces -->
+            <div class="cp-card glass-card fade-in">
+                <div class="cp-icon codeforces-icon">
+                    <i class='bx bx-bar-chart-alt-2'></i>
+                </div>
+                <div class="cp-stats">
+                    <div class="stat-main">Pupil</div>
+                    <div class="stat-label">Highest Rank</div>
+                    <div class="stat-sub">Codeforces</div>
+                </div>
+                <div class="cp-platform">Codeforces</div>
+                <a href="https://codeforces.com/profile/raghuram_01" target="_blank" class="cp-link">View Profile <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+
+            <!-- SkillRack -->
+            <div class="cp-card glass-card fade-in">
+                <div class="cp-icon skillrack-icon">
+                    <i class='bx bx-brain'></i>
+                </div>
+                <div class="cp-stats">
+                    <div class="stat-main">1800+</div>
+                    <div class="stat-label">Problems Solved</div>
+                    <div class="stat-sub">SkillRack</div>
+                </div>
+                <div class="cp-platform">SkillRack</div>
+                <a href="https://www.skillrack.com/faces/resume.xhtml?id=515036&key=edc78c6adfe9bbc7df83e2eb5e6dfb25a4e426eb" target="_blank" class="cp-link">View Profile <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </div>
     </section>
 
-    <section id="skills" class="skills">
-      <h2>My <span class="highlight">Skills</span></h2>
-
-      <div class="skills-container">
-        <div class="skills-category">
-          <h3>Programming Languages</h3>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <i class="bx bxl-java"></i>
-              <span>Java</span>
-            </div>
-            <div class="skill-item">
-              <i class="bx bxl-python"></i>
-              <span>Python</span>
-            </div>
-            <div class="skill-item">
-              <i class="bx bx-code-alt"></i>
-              <span>C++</span>
-            </div>
-            <div class="skill-item">
-              <i class="bx bx-code-block"></i>
-              <span>C</span>
-            </div>
-          </div>
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section projects-section container">
+        <div class="section-header fade-in">
+            <h2 class="section-title"><i class='bx bx-folder'></i> Featured Projects</h2>
+            <a href="https://github.com/Raghuram-G01" target="_blank" class="view-all-link">View All Projects <i class='bx bx-right-arrow-alt'></i></a>
         </div>
 
-        <div class="skills-category">
-          <h3>Web Technologies</h3>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <i class="bx bxl-html5"></i>
-              <span>HTML5</span>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass-card fade-in">
+                <div class="project-img-wrapper">
+                    <img src="proj1.png" alt="Campus Health Hub" class="project-img">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Campus Health Hub</h3>
+                    <p class="project-desc">Spring Boot based campus vaccination management platform.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">Spring Boot</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">HTML/CSS</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class='bx bx-check'></i> User registration & authentication</li>
+                        <li><i class='bx bx-check'></i> Vaccination records</li>
+                        <li><i class='bx bx-check'></i> Admin verification</li>
+                    </ul>
+                    <div class="project-links">
+                        <button class="btn-text open-modal-btn" data-project="health-hub">View Project <i class='bx bx-right-arrow-alt'></i></button>
+                    </div>
+                </div>
             </div>
-            <div class="skill-item">
-              <i class="bx bxl-css3"></i>
-              <span>CSS3</span>
-            </div>
-            <div class="skill-item">
-              <i class="bx bxl-react"></i>
-              <span>React</span>
-            </div>
-            <div class="skill-item">
-              <i class="bx bxl-nodejs"></i>
-              <span>Node.js</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="skills-category">
-          <h3>Tools & Frameworks</h3>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <i class="bx bxl-git"></i>
-              <span>Git</span>
+            <!-- Project 2 -->
+            <div class="project-card glass-card fade-in">
+                <div class="project-img-wrapper">
+                    <img src="proj2.png" alt="LeetCode Rating Prediction" class="project-img">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">LeetCode Rating Prediction</h3>
+                    <p class="project-desc">ML project to predict LeetCode contest ratings using problem solving patterns.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Machine Learning</span>
+                        <span class="tech-badge">HTML/CSS</span>
+                        <span class="tech-badge">JavaScript</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class='bx bx-check'></i> Data analysis & preprocessing</li>
+                        <li><i class='bx bx-check'></i> Model training & evaluation</li>
+                        <li><i class='bx bx-check'></i> Interactive predictions</li>
+                    </ul>
+                    <div class="project-links">
+                        <button class="btn-text open-modal-btn" data-project="rating-pred">View Project <i class='bx bx-right-arrow-alt'></i></button>
+                    </div>
+                </div>
             </div>
-            <div class="skill-item">
-              <a href="https://github.com/Raghuram-G01" target="_blank" style="text-decoration: none; color: inherit;">
-                <i class="bx bxl-github"></i>
-                <span>GitHub</span>
-              </a>
+
+            <!-- Project 3 -->
+            <div class="project-card glass-card fade-in">
+                <div class="project-img-wrapper">
+                    <img src="proj3.png" alt="Campus Placement System" class="project-img">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Campus Placement System</h3>
+                    <p class="project-desc">Web application to streamline campus recruitment processes.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">Spring Boot</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">HTML/CSS</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class='bx bx-check'></i> Student & recruiter portals</li>
+                        <li><i class='bx bx-check'></i> Application tracking</li>
+                        <li><i class='bx bx-check'></i> Admin dashboard</li>
+                    </ul>
+                    <div class="project-links">
+                        <button class="btn-text open-modal-btn" data-project="placement-system">View Project <i class='bx bx-right-arrow-alt'></i></button>
+                    </div>
+                </div>
             </div>
-            <div class="skill-item">
-              <i class="bx bx-data"></i>
-              <span>MySQL</span>
-            </div>
-            <div class="skill-item">
-              <i class="bx bxl-spring-boot"></i>
-              <span>Spring Boot</span>
-            </div>
-          </div>
         </div>
+    </section>
+
+    <!-- Bottom Info Grid (About, Skills, Journey, GitHub) -->
+    <section class="bottom-info-grid container section">
         
-        <div class="skills-category">
-          <h3>Problem Solving</h3>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <a href="https://leetcode.com/u/raghuram_01/" target="_blank" style="text-decoration: none; color: inherit;">
-                <i class="bx bx-code-alt"></i>
-                <span>LeetCode</span>
-              </a>
+        <!-- About Me -->
+        <div id="about" class="info-box glass-card fade-in">
+            <h2 class="box-title"><i class='bx bx-user'></i> About Me</h2>
+            <div class="about-content">
+                <p>I am a Computer Science Engineering student at Sri Eshwar College of Engineering. I enjoy solving complex problems using Data Structures & Algorithms and building real-world applications.</p>
+                <p>I specialize in full-stack development and love turning ideas into scalable, efficient, and user-friendly software.</p>
+                <a href="#contact" class="btn-text mt-3">Let's Connect <i class='bx bx-right-arrow-alt'></i></a>
             </div>
-            <div class="skill-item">
-              <a href="https://www.codechef.com/users/raghuram_1201" target="_blank" style="text-decoration: none; color: inherit;">
-                <i class="bx bx-trophy"></i>
-                <span>CodeChef</span>
-              </a>
-            </div>
-            <div class="skill-item">
-              <a href="https://codeforces.com/profile/raghuram_01" target="_blank" style="text-decoration: none; color: inherit;">
-                <i class="bx bx-medal"></i>
-                <span>Codeforces</span>
-              </a>
-            </div>
-            <div class="skill-item">
-              <a href="https://www.skillrack.com/faces/resume.xhtml?id=515036&key=edc78c6adfe9bbc7df83e2eb5e6dfb25a4e426eb" target="_blank" style="text-decoration: none; color: inherit;">
-                <i class="bx bx-brain"></i>
-                <span>SkillRack</span>
-               </a>
-            </div>
-          </div>
-          <div style="text-align: center; margin-top: 1rem;">
-            <a href="https://codolio.com/profile/raghuram_01" target="_blank" class="platform-link">
-              <i class="bx bx-link-external"></i> View All Platforms
-            </a>
-          </div>
         </div>
-      </div>
+
+        <!-- Skills -->
+        <div id="skills" class="info-box glass-card fade-in">
+            <h2 class="box-title"><i class='bx bx-code-curly'></i> Skills</h2>
+            <div class="skills-wrapper">
+                <div class="skill-row">
+                    <span class="skill-cat">LANGUAGES</span>
+                    <div class="skill-badges">
+                        <span class="skill-pill">C++</span>
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">Java</span>
+                        <span class="skill-pill">C</span>
+                        <span class="skill-pill">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-cat">TECH & FRAMEWORKS</span>
+                    <div class="skill-badges">
+                        <span class="skill-pill">HTML5</span>
+                        <span class="skill-pill">CSS3</span>
+                        <span class="skill-pill">ReactJS</span>
+                        <span class="skill-pill">Node.js</span>
+                        <span class="skill-pill">Express.js</span>
+                        <span class="skill-pill">Django</span>
+                        <span class="skill-pill">RESTful APIs</span>
+                    </div>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-cat">DATABASES & TOOLS</span>
+                    <div class="skill-badges">
+                        <span class="skill-pill">MongoDB</span>
+                        <span class="skill-pill">MySQL</span>
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">GitHub</span>
+                        <span class="skill-pill">Postman</span>
+                        <span class="skill-pill">VS Code</span>
+                        <span class="skill-pill">Power BI</span>
+                        <span class="skill-pill">Render</span>
+                    </div>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-cat">CS FUNDAMENTALS</span>
+                    <div class="skill-badges">
+                        <span class="skill-pill">DSA</span>
+                        <span class="skill-pill">DBMS</span>
+                        <span class="skill-pill">OOP</span>
+                        <span class="skill-pill">Operating Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Journey -->
+        <div class="info-box glass-card fade-in">
+            <h2 class="box-title"><i class='bx bx-time-five'></i> Journey</h2>
+            <div class="journey-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-desc">Started B.E. Computer Science & Engineering</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-desc">Focused on DSA and competitive programming</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2026</div>
+                    <div class="timeline-desc">Building real-world software projects</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Now</div>
+                    <div class="timeline-desc">Preparing for software engineering opportunities</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GitHub Activity (Mockup linking to real profile) -->
+        <div class="info-box glass-card fade-in">
+            <h2 class="box-title"><i class='bx bxl-github'></i> GitHub Activity</h2>
+            <div class="github-activity">
+                <div class="gh-stats">
+                    <div class="gh-stat">
+                        <span class="gh-val">80+</span>
+                        <span class="gh-label">Repositories</span>
+                    </div>
+                    <div class="gh-stat">
+                        <span class="gh-val">400+</span>
+                        <span class="gh-label">Commits</span>
+                    </div>
+                    <div class="gh-stat">
+                        <span class="gh-val">200+</span>
+                        <span class="gh-label">Contributions</span>
+                    </div>
+                </div>
+                <div class="gh-graph">
+                    <!-- Simple CSS grid representation of GH graph for aesthetic -->
+                    <div class="graph-grid" id="gh-grid-mock"></div>
+                </div>
+                <a href="https://github.com/Raghuram-G01" target="_blank" class="btn-text mt-3">Visit GitHub Profile <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </div>
+
     </section>
 
-    <section id="projects" class="projects">
-      <h2>My <span class="highlight">Projects</span></h2>
-
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-image">
-            <img src="proj1.png" alt="Campus Health Hub" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px 15px 0 0;">
-          </div>
-          <div class="project-content">
-            <h3>Campus Health Hub</h3>
-            <p>
-              A comprehensive health management system built with Spring Boot and MySQL to efficiently manage vaccination records within a campus environment. The application features secure user registration, vaccination record tracking, admin verification workflows, and compliance monitoring. Students can update their health status, upload vaccination certificates, and receive automated reminders. Administrators can generate reports, monitor campus health trends, and ensure regulatory compliance through an intuitive dashboard.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Spring Boot</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
+    <!-- Education Section -->
+    <section id="education" class="section container fade-in">
+        <h2 class="section-title"><i class='bx bxs-graduation'></i> Education</h2>
+        <div class="education-card glass-card">
+            <div class="edu-content">
+                <h3>Sri Eshwar College of Engineering</h3>
+                <h4 class="accent-text">B.E. Computer Science & Engineering</h4>
+                <div class="edu-meta">
+                    <span><i class='bx bx-calendar'></i> 2024 – 2028</span>
+                </div>
             </div>
-          </div>
         </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="proj2.png" alt="LeetCode Rating Prediction" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px 15px 0 0;">
-          </div>
-          <div class="project-content">
-            <h3>LeetCode Rating Prediction</h3>
-            <p>
-              A machine learning-powered web application that predicts LeetCode contest ratings based on user performance metrics. The system analyzes solving patterns, problem difficulty preferences, and historical contest data to forecast future ratings. Features an intuitive HTML/CSS interface where users can input their statistics and receive personalized rating predictions. The ML model uses regression algorithms trained on extensive LeetCode user data to provide accurate forecasts.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Machine Learning</span>
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="proj3.png" alt="Campus Placement System" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px 15px 0 0;">
-          </div>
-          <div class="project-content">
-            <h3>Campus Placement System</h3>
-            <p>
-              A comprehensive web application designed to streamline campus recruitment processes. The system connects students, recruiters, and administrators on a unified platform. Students can register, upload resumes, and apply for job opportunities. Recruiters can post job listings, review applications, and schedule interviews. The platform includes automated notifications, application tracking, and detailed analytics for placement coordinators.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Spring Boot</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section
-      id="resume"
-      class="resume-section"
-      style="
-        display: none;
-        min-height: 100vh;
-        padding: 5rem 5%;
-        background: #111;
-        text-align: center;
-      "
-    >
-      <h2 style="color: #fff; margin-bottom: 2rem">
-        My <span style="color: #00d4ff">Resume</span>
-      </h2>
-      <div style="max-width: 800px; margin: 0 auto">
-        <iframe
-          id="resume-iframe"
-          src=""
-          style="
-            width: 100%;
-            height: 600px;
-            border: 2px solid #00d4ff;
-            border-radius: 10px;
-            display: none;
-          "
-        ></iframe>
-        <div style="margin-top: 2rem">
-          <a
-            href="Raghuram_resume_updated (1).pdf"
-            class="btn-resume"
-            download="Raghuram_resume.pdf"
-            style="
-              background: linear-gradient(45deg, #00d4ff, #0099cc);
-              color: #fff;
-              border: none;
-            "
-            ><i class="bx bx-download"></i> Download Resume</a
-          >
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section container fade-in">
+        <div class="contact-wrapper glass-card">
+            <div class="contact-info">
+                <h2>Let's build something meaningful.</h2>
+                <p>I'm open to software engineering opportunities, technical collaborations and interesting projects.</p>
+                
+                <div class="contact-links mt-4">
+                    <a href="mailto:raghuram1212007@gmail.com" class="contact-link"><i class='bx bx-envelope'></i> Email Me</a>
+                    <a href="https://www.linkedin.com/in/raghuram1212007" target="_blank" class="contact-link"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+                    <a href="https://github.com/Raghuram-G01" target="_blank" class="contact-link"><i class='bx bxl-github'></i> GitHub</a>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="contact-name" placeholder="Name" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact-email" placeholder="Email" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="contact-subject" placeholder="Subject" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact-message" placeholder="Message" rows="5" required class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message <i class='bx bx-send'></i></button>
+                </form>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section class="contact-form" id="contact-form">
-      <h2>Contact <span class="highlight">Me</span></h2>
-
-      <form action="#">
-        <div class="input-box">
-          <input type="text" placeholder="Full Name" required />
-          <input type="email" placeholder="Email" required />
-        </div>
-
-        <div class="input-box">
-          <input type="number" placeholder="Phone Number" />
-          <input type="text" placeholder="Subject" required />
-        </div>
-
-        <textarea
-          name="message"
-          cols="30"
-          rows="10"
-          placeholder="Your Message"
-          required
-        ></textarea>
-
-        <input
-          type="submit"
-          value="Send Message"
-          class="btn-primary submit-btn"
-        />
-      </form>
-    </section>
-
+    <!-- Footer -->
     <footer class="footer">
-
-
-      <div class="footer-social">
-        <a
-          href="https://www.linkedin.com/in/raghuram1212007"
-          target="_blank"
-          title="LinkedIn"
-          ><i class="bx bxl-linkedin"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/_raghuram_g/"
-          target="_blank"
-          title="Instagram"
-          ><i class="bx bxl-instagram"></i
-        ></a>
-        <a href="https://github.com/Raghuram-G01" target="_blank" title="GitHub"
-          ><i class="bx bxl-github"></i
-        ></a>
-      </div>
-
-      <p class="copyright">© 2025 Raghuram | All Rights Reserved</p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>RAGHURAM.G</h3>
+                <p>Computer Science Engineer &bull; Competitive Programmer &bull; Full-Stack Developer</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/Raghuram-G01" target="_blank" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                <a href="https://www.linkedin.com/in/raghuram1212007" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                <a href="#contact" aria-label="Email"><i class="bx bx-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Raghuram G. All Rights Reserved.</p>
+        </div>
     </footer>
-  </body>
+
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-content glass-card">
+            <button class="modal-close" aria-label="Close modal"><i class='bx bx-x'></i></button>
+            <div class="modal-body" id="modal-dynamic-content">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>
