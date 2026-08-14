@@ -233,4 +233,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => sparkle.remove(), 800);
     }
+
+    // 6. Contact Form Messaging Integration
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const subject = document.getElementById('contact-subject').value;
+            const message = document.getElementById('contact-message').value;
+            
+            // The phone number provided by the user
+            const phoneNumber = "6369153599";
+            
+            // Format the message for standard SMS
+            const textMessage = `New Contact from Portfolio\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+            
+            // Open the default SMS messaging app with the prefilled message
+            const smsUrl = `sms:${phoneNumber}?body=${encodeURIComponent(textMessage)}`;
+            window.location.href = smsUrl;
+            
+            // Show a quick success alert and reset the form
+            alert("Success! Your message app has been opened. Please hit send to deliver the message.");
+            contactForm.reset();
+        });
+    }
 });
