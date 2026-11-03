@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    menuToggle.addEventListener('click', toggleMenu);
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', toggleMenu);
+    }
 
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -164,17 +166,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    closeBtn.addEventListener('click', closeModal);
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
 
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
 
     // Close on Escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
             closeModal();
         }
     });

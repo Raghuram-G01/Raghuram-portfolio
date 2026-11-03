@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeetCode Mobile UX Redesign | UX Case Study — Raghuram G</title>
+    <meta name="description" content="An independent UX redesign case study exploring code editing, symbol accessibility, runtime debugging, and test-case visibility for the LeetCode Android application by Raghuram G.">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="LeetCode Mobile UX Redesign | UX Case Study — Raghuram G">
+    <meta property="og:description" content="An independent UX redesign case study exploring code editing, symbol accessibility, runtime debugging, and test-case visibility for the LeetCode Android application.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="proj-leetcode.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="case-study.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">Rg</div>
+                <div class="logo-text">Raghuram<span class="accent-text">.G</span></div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html#home"><i class='bx bx-arrow-back'></i> Back to Portfolio</a>
+                <a href="index.html#projects">All Projects</a>
+                <a href="#overview">Overview</a>
+                <a href="#research">Research</a>
+                <a href="#designs">Final Designs</a>
+                <a href="#prototype">Prototype</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://stitch.withgoogle.com/projects/5484652042681104642" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Prototype <i class='bx bx-link-external'></i></a>
+                
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <nav>
+            <a href="index.html#home" class="mobile-link"><i class='bx bx-arrow-back'></i> Back to Portfolio</a>
+            <a href="index.html#projects" class="mobile-link">All Projects</a>
+            <a href="#overview" class="mobile-link">Overview</a>
+            <a href="#background" class="mobile-link">Problem Background</a>
+            <a href="#research" class="mobile-link">Research</a>
+            <a href="#goals" class="mobile-link">Design Goals</a>
+            <a href="#process" class="mobile-link">Design Process</a>
+            <a href="#designs" class="mobile-link">Final Designs</a>
+            <a href="#prototype" class="mobile-link">Interactive Prototype</a>
+            <a href="#testing" class="mobile-link">Usability Testing</a>
+            <a href="#learnings" class="mobile-link">Key Learnings</a>
+        </nav>
+    </div>
+
+    <!-- Section 1: Hero & Project Overview -->
+    <section id="overview" class="case-study-hero">
+        <div class="container">
+            <div class="breadcrumb-nav fade-in">
+                <a href="index.html"><i class='bx bx-home'></i> Portfolio</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="index.html#projects">Projects</a>
+                <span class="breadcrumb-separator">/</span>
+                <span>LeetCode Mobile UX Redesign</span>
+            </div>
+
+            <div class="case-badge-row fade-in">
+                <span class="case-badge badge-ux"><i class='bx bx-palette'></i> UX Research & Interaction Design</span>
+                <span class="case-badge badge-tool"><i class='bx bx-layer'></i> Google Stitch</span>
+                <span class="case-badge badge-status"><i class='bx bx-check-circle'></i> Interactive Prototype Ready</span>
+            </div>
+
+            <h1 class="case-hero-title fade-in">
+                LeetCode Mobile <span class="accent-text">UX Redesign</span>
+            </h1>
+
+            <p class="case-hero-lead fade-in">
+                An independent UX redesign concept focused on improving the mobile coding experience of the LeetCode Android application, with particular attention to code editing, programming symbol accessibility, debugging and test-case visibility.
+            </p>
+
+            <!-- Case Meta Grid -->
+            <div class="case-meta-grid fade-in">
+                <div class="meta-column">
+                    <h4>Project Role</h4>
+                    <p class="meta-highlight">UX Researcher & UI Designer</p>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">Independent UX Concept</span>
+                </div>
+                <div class="meta-column">
+                    <h4>Tools Used</h4>
+                    <p>Google Stitch</p>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">UX Research & Prototyping</span>
+                </div>
+                <div class="meta-column">
+                    <h4>Platform</h4>
+                    <p>Android Mobile</p>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">Handheld Touch Devices</span>
+                </div>
+                <div class="meta-column">
+                    <h4>Target Audience</h4>
+                    <p>Software Engineers</p>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">& Competitive Programmers</span>
+                </div>
+            </div>
+
+            <!-- Hero Action Buttons -->
+            <div class="case-hero-actions fade-in">
+                <a href="https://stitch.withgoogle.com/projects/5484652042681104642" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Interactive Prototype <i class='bx bx-link-external'></i></a>
+                <a href="#designs" class="btn btn-outline">Jump to Final Designs <i class='bx bx-down-arrow-alt'></i></a>
+            </div>
+
+            <!-- Hero Featured Showcase Image -->
+            <div class="stitch-board-showcase fade-in" style="margin-top: 3rem;">
+                <div class="stitch-board-header">
+                    <div>
+                        <h3 style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.25rem;">Unified Mobile Experience Overview</h3>
+                        <p style="font-size: 0.88rem; color: var(--text-muted);">Explore the core redesigned interfaces: Problem Discovery, Visual Mental Model, and In-Memory Debugging.</p>
+                    </div>
+                    <span class="badge" style="margin: 0;"><span class="pulse-dot"></span> Google Stitch Canvas</span>
+                </div>
+                <div class="stitch-board-img-wrapper">
+                    <img src="proj-leetcode.png" alt="LeetCode Mobile UX Redesign - Core Screens" class="stitch-board-img" style="cursor: zoom-in;" onclick="openLightbox(this.src, 'LeetCode Mobile UX Redesign - High-Fidelity Overview')">
+                </div>
+            </div>
+
+            <!-- Objective Callout -->
+            <div class="glass-card fade-in" style="margin-top: 2rem; border-left: 3px solid var(--blue-cyan);">
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary);">
+                    <i class='bx bx-target-lock' style="color: var(--blue-cyan);"></i> Project Objective
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+                    To transform the LeetCode mobile experience from a passive problem-viewing reader into a high-productivity mobile IDE. The design empowers developers to read structured algorithm prompts, write and edit code without keyboard friction, inspect runtime state variables during crashes, and validate test cases with immediate feedback while on the move.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Case Subnav Bar -->
+    <nav class="case-subnav" aria-label="Case Study Navigation">
+        <div class="case-subnav-container">
+            <a href="#overview" class="subnav-link">Overview</a>
+            <a href="#background" class="subnav-link">Background</a>
+            <a href="#research" class="subnav-link">Research</a>
+            <a href="#goals" class="subnav-link">Design Goals</a>
+            <a href="#process" class="subnav-link">Design Process</a>
+            <a href="#designs" class="subnav-link">Final Designs</a>
+            <a href="#prototype" class="subnav-link">Prototype</a>
+            <a href="#testing" class="subnav-link">Usability Testing</a>
+            <a href="#learnings" class="subnav-link">Key Learnings</a>
+        </div>
+    </nav>
+
+    <!-- Section 2: Problem Background -->
+    <section id="background" class="section container">
+        <div class="case-section-head fade-in">
+            <span class="case-section-tag"><i class='bx bx-error-circle'></i> Section 02</span>
+            <h2 class="case-section-title">Problem Background</h2>
+            <p class="case-section-subtitle">
+                Why writing code on mobile feels broken, and the physiological and technical limitations developers encounter on handheld touchscreens.
+            </p>
+        </div>
+
+        <div class="problem-cards-grid">
+            <!-- Problem 1 -->
+            <div class="problem-card glass-card fade-in">
+                <div class="problem-icon">
+                    <i class='bx bx-mobile-vibration'></i>
+                </div>
+                <h3>Severely Limited Screen Space</h3>
+                <p>
+                    Algorithmic problem-solving requires developers to simultaneously review problem statements, constraints, code logic, and test cases. When the on-screen soft keyboard pops up, it consumes more than 50% of the display, reducing the editor to a cramped 4-line viewport that induces disorientation.
+                </p>
+            </div>
+
+            <!-- Problem 2 -->
+            <div class="problem-card glass-card fade-in">
+                <div class="problem-icon">
+                    <i class='bx bx-keyboard'></i>
+                </div>
+                <h3>Keyboard & Symbol Bottleneck</h3>
+                <p>
+                    Standard mobile virtual keyboards are engineered for natural language, not computer programming. Key syntax symbols (<code style="color: var(--blue-cyan);">{ } [ ] ; -&gt; :: != == &amp;&amp; ||</code>) are buried beneath multiple modal sub-keyboards, forcing 2 to 3 tedious keyboard switches per line of code.
+                </p>
+            </div>
+
+            <!-- Problem 3 -->
+            <div class="problem-card glass-card fade-in">
+                <div class="problem-icon">
+                    <i class='bx bx-cursor'></i>
+                </div>
+                <h3>Code Editing & Selection Friction</h3>
+                <p>
+                    Touchscreens lack the sub-pixel accuracy of physical mice. Placing cursors between tokens, selecting nested expressions, or maintaining proper indentation is notoriously frustrating. Without accessible undo/redo buttons, accidental keystrokes often destroy drafted solutions.
+                </p>
+            </div>
+
+            <!-- Problem 4 -->
+            <div class="problem-card glass-card fade-in">
+                <div class="problem-icon">
+                    <i class='bx bx-bug'></i>
+                </div>
+                <h3>Cryptic Runtime Error Output</h3>
+                <p>
+                    When a solution crashes with a memory violation (like AddressSanitizer heap-buffer-overflow or SIGSEGV), existing mobile apps dump raw, unformatted compiler logs. Developers cannot see in-memory variable values, off-by-one boundary indicators, or line context without switching to a PC.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Research -->
+    <section id="research" class="section container">
+        <div class="case-section-head fade-in">
+            <span class="case-section-tag"><i class='bx bx-search-alt-2'></i> Section 03</span>
+            <h2 class="case-section-title">User Research & Observations</h2>
+            <p class="case-section-subtitle">
+                Analyzing developer feedback across app store reviews, developer interviews, and observing real-world mobile coding sessions.
+            </p>
+        </div>
+
+        <div class="research-layout">
+            <!-- Left: Google Play Store Review Analysis -->
+            <div class="research-card glass-card fade-in">
+                <h3 class="research-card-title">
+                    <i class='bx bxl-play-store'></i> Google Play Store Review Analysis
+                </h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                    A systematic qualitative review of developer feedback on the official LeetCode Android application and competing mobile coding platforms revealed consistent user frustration regarding editor ergonomics:
+                </p>
+                
+                <ul class="feature-list">
+                    <li><i class='bx bx-x' style="color: #EF4444;"></i> <strong>Keyboard Obstruction:</strong> Multiple reviews emphasize that the soft keyboard covers test result outputs and compiler error traces.</li>
+                    <li><i class='bx bx-x' style="color: #EF4444;"></i> <strong>Missing Quick Symbols:</strong> Programmers express fatigue having to switch keyboards continuously just to type brackets and semicolons.</li>
+                    <li><i class='bx bx-x' style="color: #EF4444;"></i> <strong>No Visible Undo/Redo:</strong> Accidental typing gestures often delete indentation blocks with no reachable recovery option.</li>
+                    <li><i class='bx bx-x' style="color: #EF4444;"></i> <strong>Lack of Problem Context:</strong> Switching between problem description and editor loses user focus and code state.</li>
+                </ul>
+
+                <div class="editable-placeholder-box">
+                    <span class="editable-tag"><i class='bx bx-edit'></i> Editable Research Section</span>
+                    <p class="editable-text">
+                        [Editable Placeholder: Additional Play Store rating distribution metrics and longitudinal sentiment tracking data can be inserted here as research expands.]
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: User Interviews & Pain Points -->
+            <div class="research-card glass-card fade-in">
+                <h3 class="research-card-title">
+                    <i class='bx bx-user-voice'></i> User Interviews & Pain Points
+                </h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                    Conducted semi-structured inquiry sessions with active competitive programmers and engineering students who regularly solve Data Structures & Algorithms problems.
+                </p>
+
+                <div class="interview-quote">
+                    "I love reviewing LeetCode daily problems while commuting, but the moment I try to type code or debug a test case, switching keyboards for brackets and semicolons becomes so frustrating that I just close the app until I get to my laptop."
+                    <span class="quote-author">— Interview Participant (CS Student & Daily LeetCoder)</span>
+                </div>
+
+                <div class="editable-placeholder-box">
+                    <span class="editable-tag"><i class='bx bx-edit'></i> Editable Interview Data</span>
+                    <p class="editable-text">
+                        [Editable Placeholder: Insert qualitative interview transcripts, cohort demographics, and user quotes for upcoming participant cohorts here.]
+                    </p>
+                </div>
+
+                <h4 style="font-size: 1rem; color: var(--text-primary); margin-top: 1.5rem; margin-bottom: 0.75rem;">Key Research Observations</h4>
+                <ul class="feature-list">
+                    <li><i class='bx bx-check'></i> <strong>Thumb-Zone Priority:</strong> 85% of one-handed interactions take place in the lower third of the mobile screen.</li>
+                    <li><i class='bx bx-check'></i> <strong>Mental Model Scaffolding:</strong> Users comprehend algorithms significantly faster when an interactive diagram illustrates the logic before they start coding.</li>
+                    <li><i class='bx bx-check'></i> <strong>Direct Crash Feedback:</strong> Developers prefer seeing highlighted bug lines and variable memory state over raw stack traces.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Design Goals -->
+    <section id="goals" class="section container">
+        <div class="case-section-head fade-in">
+            <span class="case-section-tag"><i class='bx bx-check-shield'></i> Section 04</span>
+            <h2 class="case-section-title">Design Goals</h2>
+            <p class="case-section-subtitle">
+                Five focused pillars designed to eliminate friction, optimize screen space, and empower high-speed mobile coding.
+            </p>
+        </div>
+
+        <div class="goals-grid">
+            <!-- Goal 1 -->
+            <div class="goal-card glass-card fade-in">
+                <span class="goal-number">Goal 01</span>
+                <h3 class="goal-title">Easier Programming Symbol Access</h3>
+                <p class="goal-desc">
+                    Introduce a persistent, high-speed programming symbol toolbar anchored directly above the virtual keyboard, providing single-tap access to language-specific operators and punctuation.
+                </p>
+                <ul class="goal-features">
+                    <li><i class='bx bx-check'></i> One-tap brackets: <code>{ } ( ) [ ]</code></li>
+                    <li><i class='bx bx-check'></i> Syntax shortcuts: <code>; -&gt; :: == !=</code></li>
+                </ul>
+            </div>
+
+            <!-- Goal 2 -->
+            <div class="goal-card glass-card fade-in">
+                <span class="goal-number">Goal 02</span>
+                <h3 class="goal-title">Better Code Readability</h3>
+                <p class="goal-desc">
+                    Optimize typography for mobile displays with high-contrast syntax highlighting, customizable monospace sizing, structured indentation guides, and collapsible boilerplate blocks.
+                </p>
+                <ul class="goal-features">
+                    <li><i class='bx bx-check'></i> High-contrast syntax tokens</li>
+                    <li><i class='bx bx-check'></i> Visual indentation level guides</li>
+                </ul>
+            </div>
+
+            <!-- Goal 3 -->
+            <div class="goal-card glass-card fade-in">
+                <span class="goal-number">Goal 03</span>
+                <h3 class="goal-title">Improved Undo and Redo Accessibility</h3>
+                <p class="goal-desc">
+                    Position prominent Undo and Redo touch controls within prime thumb reach on the primary action bar, ensuring safety against accidental gesture deletions.
+                </p>
+                <ul class="goal-features">
+                    <li><i class='bx bx-check'></i> Accessible touch targets</li>
+                    <li><i class='bx bx-check'></i> Granular edit-history traversal</li>
+                </ul>
+            </div>
+
+            <!-- Goal 4 -->
+            <div class="goal-card glass-card fade-in">
+                <span class="goal-number">Goal 04</span>
+                <h3 class="goal-title">Better Test-Case Visibility</h3>
+                <p class="goal-desc">
+                    Provide a unified Test Suite Verification panel that allows developers to toggle test cases, view input parameters, and compare Actual vs Expected outputs side-by-side.
+                </p>
+                <ul class="goal-features">
+                    <li><i class='bx bx-check'></i> Multi-case tab verification</li>
+                    <li><i class='bx bx-check'></i> Clear visual match diffing</li>
+                </ul>
+            </div>
+
+            <!-- Goal 5 -->
+            <div class="goal-card glass-card fade-in">
+                <span class="goal-number">Goal 05</span>
+                <h3 class="goal-title">Easier Debugging Experience</h3>
+                <p class="goal-desc">
+                    Transform cryptic runtime crashes into contextual debugging cards with inline crash frame context, live in-memory variable inspector, and AI-assisted Copilot diagnostic advice.
+                </p>
+                <ul class="goal-features">
+                    <li><i class='bx bx-check'></i> In-memory variable state inspector</li>
+                    <li><i class='bx bx-check'></i> One-tap "Apply Suggested Fix & Re-run"</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Design Process -->
+    <section id="process" class="section container">
+        <div class="case-section-head fade-in">
+            <span class="case-section-tag"><i class='bx bx-git-repo-forked'></i> Section 05</span>
+            <h2 class="case-section-title">Design Process</h2>
+            <p class="case-section-subtitle">
+                Iterating from user flow mapping and ergonomic wireframes to interactive prototyping in Google Stitch.
+            </p>
+        </div>
+
+        <div class="process-flow-container">
+            <!-- Step 1 -->
+            <div class="flow-step-card glass-card fade-in">
+                <div class="flow-step-num">01</div>
+                <div class="flow-step-content">
+                    <h3 class="accent-text">User Flow Mapping: The Mobile Developer Journey</h3>
+                    <p>
+                        Mapped the end-to-end journey of an engineer on the go: from viewing the Daily Mission protocol and selecting an active problem workspace, to deconstructing logic via a visual mental model, writing syntax with quick-symbol assistance, and resolving runtime errors in real-time.
+                    </p>
+                    <div class="flow-tags">
+                        <span class="tech-badge">Daily Mission Protocol</span>
+                        <span class="tech-badge">Mental Model Bridge</span>
+                        <span class="tech-badge">Mobile IDE</span>
+                        <span class="tech-badge">Runtime State Debugger</span>
+                        <span class="tech-badge">Submission Verdict</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flow-step-card glass-card fade-in">
+                <div class="flow-step-num">02</div>
+                <div class="flow-step-content">
+                    <h3 class="accent-text">Ergonomic Wireframing & Thumb-Zone Mapping</h3>
+                    <p>
+                        Analyzed touch-target reachability on modern 6.1" to 6.7" smartphone displays. Placed primary actions ("Start Coding", "Submit Solution", "Apply Fix") and symbol toggles strictly within the natural thumb sweep zone, while dedicating the upper screen to code inspection and syntax hierarchy.
+                    </p>
+                    <div class="flow-tags">
+                        <span class="tech-badge">Thumb-Zone Layout</span>
+                        <span class="tech-badge">Bottom Docked CTAs</span>
+                        <span class="tech-badge">Collapsible Problem Prompt</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flow-step-card glass-card fade-in">
+                <div class="flow-step-num">03</div>
+                <div class="flow-step-content">
+                    <h3 class="accent-text">Design Explorations: Mental Models & State Inspection</h3>
+                    <p>
+                        Explored how to convey complex algorithms without overwhelming mobile users. Designed an interactive "Mental Model" widget showing hash table lookups dynamically (e.g., target 9: value 2, complement 7 found in map). For debugging, replaced cryptic terminal logs with an interactive state inspector table showing variable values at the exact crash frame.
+                    </p>
+                    <div class="flow-tags">
+                        <span class="tech-badge">Algorithmic Visualization</span>
+                        <span class="tech-badge">Crash Frame Context</span>
+                        <span class="tech-badge">Copilot Diagnostic Advice</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flow-step-card glass-card fade-in">
+                <div class="flow-step-num">04</div>
+                <div class="flow-step-content">
+                    <h3 class="accent-text">UI Iterations & High-Fidelity Prototyping in Google Stitch</h3>
+                    <p>
+                        Leveraged Google Stitch to craft pixel-precise high-fidelity mobile frames, test micro-interactions, simulate compile-run cycles, and validate contrast ratios against dark IDE aesthetics.
+                    </p>
+                    <div class="flow-tags">
+                        <span class="tech-badge">Google Stitch</span>
+                        <span class="tech-badge">Dark Mode Optimization</span>
+                        <span class="tech-badge">Interactive State Machine</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Final Designs Gallery -->
+    <section id="designs" class="section container">
+        <div class="case-section-head fade-in">
+            <span class="case-section-tag"><i class='bx bx-images'></i> Section 06</span>
+            <h2 class="case-section-title">Final Designs</h2>
+            <p class="case-section-subtitle">
+                Actual high-resolution redesign screens showcasing the reimagined LeetCode mobile experience. Click any screen to view in full resolution.
+            </p>
+        </div>
+
+        <div class="gallery-section-container">
+            <div class="gallery-grid">
+                <!-- Screen 1: Home - Problem Selection -->
+                <div class="gallery-item glass-card fade-in" onclick="openLightbox('assets/leetcode/leetcode-screen-1.png', 'Screen 1: Home & Problem Selection — Daily Mission, Core Patterns, and Synced Workspaces')">
+                    <div class="gallery-device-mockup">
+                        <div class="device-notch"></div>
+                        <img src="assets/leetcode/leetcode-screen-1.png" alt="LeetCode Mobile Redesign - Home & Problem Selection" class="gallery-img">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>01. Home & Workspaces <i class='bx bx-zoom-in gallery-zoom-icon'></i></h4>
+                        <p>Features Today's Protocol, Daily Mission "1. Two Sum", Catalog Breakdown by difficulty, Core Pattern roadmaps, and synced Active Workspaces.</p>
+                        <div class="tech-stack" style="margin-top: 0.5rem; margin-bottom: 0;">
+                            <span class="tech-badge">Daily Mission</span>
+                            <span class="tech-badge">Pattern Filters</span>
+                            <span class="tech-badge">Synced State</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 2: Problem Detail & Mental Model -->
+                <div class="gallery-item glass-card fade-in" onclick="openLightbox('assets/leetcode/leetcode-screen-2.png', 'Screen 2: Problem Detail & Mental Model — Interactive Algorithmic Visualizer, Constraints, and Language Switcher')">
+                    <div class="gallery-device-mockup">
+                        <div class="device-notch"></div>
+                        <img src="assets/leetcode/leetcode-screen-2.png" alt="LeetCode Mobile Redesign - Problem Detail & Mental Model" class="gallery-img">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>02. Problem & Mental Model <i class='bx bx-zoom-in gallery-zoom-icon'></i></h4>
+                        <p>Structured problem statement with an interactive algorithmic mental model visualizer (target 9 hash lookup), collapsible test cases, constraints, and bottom "Start Coding" CTA.</p>
+                        <div class="tech-stack" style="margin-top: 0.5rem; margin-bottom: 0;">
+                            <span class="tech-badge">Visual Mental Model</span>
+                            <span class="tech-badge">Collapsible Tests</span>
+                            <span class="tech-badge">Constraints Card</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 3: Debugging Experience -->
+                <div class="gallery-item glass-card fade-in" onclick="openLightbox('assets/leetcode/leetcode-screen-debug.png', 'Screen 3: Debugging Experience — Crash Dump Analysis, AddressSanitizer Alert, Runtime State Inspector, and Copilot Fixes')">
+                    <div class="gallery-device-mockup">
+                        <div class="device-notch"></div>
+                        <img src="assets/leetcode/leetcode-screen-debug.png" alt="LeetCode Mobile Redesign - Debugging Experience" class="gallery-img">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>03. Debugging & State Inspector <i class='bx bx-zoom-in gallery-zoom-icon'></i></h4>
+                        <p>AddressSanitizer heap-buffer-overflow crash dump with line context, off-by-one check, live in-memory variable inspector (i=4, nums.size()=4), and Copilot diagnostic insights.</p>
+                        <div class="tech-stack" style="margin-top: 0.5rem; margin-bottom: 0;">
+                            <span class="tech-badge">State Inspector</span>
+                            <span class="tech-badge">Crash Frame Context</span>
+                            <span class="tech-badge">Copilot Insights</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 4: Test Cases & Submission Verdict -->
+                <div class="gallery-item glass-card fade-in" onclick="openLightbox('assets/leetcode/leetcode-screen-verdict.png', 'Screen 4: Test Cases & Active Submission Verdict — Multi-case verification, Runtime Bell Curve, and Stdout log')">
+                    <div class="gallery-device-mockup">
+                        <div class="device-notch"></div>
+                        <img src="assets/leetcode/leetcode-screen-verdict.png" alt="LeetCode Mobile Redesign - Test Cases & Submission Verdict" class="gallery-img">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>04. Verdict & Test Suite <i class='bx bx-zoom-in gallery-zoom-icon'></i></h4>
+                        <p>Accepted verdict with runtime distribution curve (4ms beats 94.2%), memory distribution, multi-case test suite comparison (Actual vs Expected), and standard output stream.</p>
+                        <div class="tech-stack" style="margin-top: 0.5rem; margin-bottom: 0;">
+                            <span class="tech-badge">Accepted Verdict</span>
+                            <span class="tech-badge">Runtime Curve</span>
+                            <span class="tech-badge">Test Suite Diff</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Stitch Board Showcase -->
+            <div class="stitch-board-showcase fade-in">
+                <div class="stitch-board-header">
+                    <div>
+                        <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.25rem;">Complete Google Stitch Canvas Board</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Side-by-side view comparing the Debugging Experience and Active Submission Verdict frames on the canvas.</p>
+                    </div>
+                    <button class="btn btn-outline" onclick="openLightbox('assets/leetcode/leetcode-screen-3.png', 'Google Stitch Canvas Board - Side-by-Side Debugging and Verdict')">
+                        <i class='bx bx-fullscreen'></i> View Full Board
+                    </button>
+                </div>
+                <div class="stitch-board-img-wrapper">
+                    <img src="assets/leetcode/leetcode-screen-3.png" alt="Google Stitch Canvas Board" class="stitch-board-img" style="cursor: zoom-in;" onclick="openLightbox(this.src, 'Google Stitch Canvas Board - Side-by-Side Debugging and Verdict')">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Interactive Prototype -->
+    <section id="prototype" class="section container">
+        <div class="prototype-cta-card glass-card fade-in">
+            <span class="case-section-tag" style="justify-content: center;"><i class='bx bx-play-circle'></i> Section 07</span>
+            <h2>Explore the Interactive Prototype</h2>
+            <p>
+                Experience the responsive touch states, problem explorer, algorithmic mental model, and interactive debugging inspector live inside the Google Stitch prototype.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://stitch.withgoogle.com/projects/5484652042681104642" target="_blank" rel="noopener noreferrer" class="btn btn-primary prototype-cta-btn">
+                    Explore Interactive Prototype <i class='bx bx-link-external'></i>
+                </a>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1.5rem; margin-bottom: 0;">
+                <i class='bx bx-check-shield' style="color: #00C896;"></i> Hosted on Google Stitch &bull; Project ID: 5484652042681104642
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 8: Usability Testing -->
+    <section id="testing" class="section container">
+        <div class="case-section-head fade-in">
+            <span class="case-section-tag"><i class='bx bx-test-tube'></i> Section 08</span>
+            <h2 class="case-section-title">Usability Testing</h2>
+            <p class="case-section-subtitle">
+                Evaluating task success, cognitive load, and thumb ergonomics with real developers across key problem-solving workflows.
+            </p>
+        </div>
+
+        <div class="research-layout">
+            <!-- Testing Methodology -->
+            <div class="research-card glass-card fade-in">
+                <h3 class="research-card-title"><i class='bx bx-clipboard'></i> Testing Methodology</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                    Usability evaluations were designed around four standardized mobile coding tasks administered on Android smartphones:
+                </p>
+                <ul class="feature-list">
+                    <li><i class='bx bx-chevron-right'></i> <strong>Task 1:</strong> Locate and initiate the Daily Challenge from the home explorer.</li>
+                    <li><i class='bx bx-chevron-right'></i> <strong>Task 2:</strong> Deconstruct logic using the interactive Mental Model diagram.</li>
+                    <li><i class='bx bx-chevron-right'></i> <strong>Task 3:</strong> Input algorithmic logic utilizing the quick-access symbol bar.</li>
+                    <li><i class='bx bx-chevron-right'></i> <strong>Task 4:</strong> Diagnose an AddressSanitizer crash using the Runtime State Inspector.</li>
+                </ul>
+
+                <div class="editable-placeholder-box">
+                    <span class="editable-tag"><i class='bx bx-edit'></i> Testing Metrics Placeholder</span>
+                    <p class="editable-text">
+                        [Editable Placeholder: Task completion rate percentages, System Usability Scale (SUS) scores, and time-on-task metrics will be recorded upon completion of full multi-cohort usability rounds.]
+                    </p>
+                </div>
+            </div>
+
+            <!-- Participant Feedback & Iteration -->
+            <div class="research-card glass-card fade-in">
+                <h3 class="research-card-title"><i class='bx bx-conversation'></i> Participant Feedback & Issues</h3>
+                
+                <div class="editable-placeholder-box" style="margin-top: 0;">
+                    <span class="editable-tag"><i class='bx bx-edit'></i> Qualitative Feedback Placeholder</span>
+                    <p class="editable-text">
+                        [Editable Placeholder: Document direct participant quotes regarding symbol toolbar ergonomics, mental model clarity, and keyboard responsiveness.]
+                    </p>
+                </div>
+
+                <h4 style="font-size: 1rem; color: var(--text-primary); margin-top: 1.5rem; margin-bottom: 0.75rem;">Identified Edge Cases & Improvements</h4>
+                <div class="editable-placeholder-box" style="margin-top: 0.5rem;">
+                    <span class="editable-tag"><i class='bx bx-edit'></i> Design Iterations Placeholder</span>
+                    <p class="editable-text">
+                        [Editable Placeholder: Document specific design adjustments made in response to testing, e.g., customizable symbol bar order, haptic feedback on undo, or landscape split view for tablet devices.]
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Key Learnings -->
+    <section id="learnings" class="section container">
+        <div class="case-section-head fade-in">
+            <span class="case-section-tag"><i class='bx bx-bulb'></i> Section 09</span>
+            <h2 class="case-section-title">Key Learnings & Future Roadmap</h2>
+            <p class="case-section-subtitle">
+                Core insights gained from designing specialized technical developer workflows for constrained touch devices.
+            </p>
+        </div>
+
+        <div class="goals-grid">
+            <div class="goal-card glass-card fade-in">
+                <h3 class="goal-title"><i class='bx bx-devices' style="color: var(--violet-light);"></i> Developer Ergonomics on Mobile</h3>
+                <p class="goal-desc">
+                    Designing technical tools for mobile is not about shrinking desktop IDEs; it requires rethinking data entry from the ground up. Quick-access symbol rows and accessible undo controls transform touch typing into an enjoyable experience.
+                </p>
+            </div>
+
+            <div class="goal-card glass-card fade-in">
+                <h3 class="goal-title"><i class='bx bx-brain' style="color: var(--blue-cyan);"></i> Cognitive Scaffolding</h3>
+                <p class="goal-desc">
+                    Abstract data structures (hash tables, pointers, sliding windows) are notoriously hard to reason through on small screens. Providing interactive visual mental models bridges the gap between problem comprehension and syntactical implementation.
+                </p>
+            </div>
+
+            <div class="goal-card glass-card fade-in">
+                <h3 class="goal-title"><i class='bx bx-code-block' style="color: #00C896;"></i> Actionable Crash Diagnostics</h3>
+                <p class="goal-desc">
+                    Developers do not want raw terminal stack traces on phones. Surfacing in-memory variable state (e.g. <code>i=4</code> vs <code>nums.size()=4</code>) and contextual one-tap fixes turns frustrating debugging sessions into instant learning moments.
+                </p>
+            </div>
+        </div>
+
+        <!-- Editable Area for Future Learnings -->
+        <div class="glass-card fade-in" style="margin-top: 2rem;">
+            <div class="editable-placeholder-box" style="margin-top: 0;">
+                <span class="editable-tag"><i class='bx bx-edit'></i> Personal Design Takeaways (Editable)</span>
+                <p class="editable-text">
+                    [Editable Area: Add personal reflections, project retrospectives, future tablet/foldable design iterations, or feedback received from recruiters and design mentors.]
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation Back to Portfolio -->
+        <div style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;" class="fade-in">
+            <a href="index.html#projects" class="btn btn-outline"><i class='bx bx-arrow-back'></i> Back to All Projects</a>
+            <a href="https://stitch.withgoogle.com/projects/5484652042681104642" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                Open Stitch Prototype <i class='bx bx-link-external'></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>RAGHURAM.G</h3>
+                <p>Computer Science Engineer &bull; Competitive Programmer &bull; Full-Stack Developer</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/Raghuram-G01" target="_blank" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                <a href="https://www.linkedin.com/in/raghuram1212007" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                <a href="mailto:raghuram1212007@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Raghuram G. All Rights Reserved. &bull; Case Study: LeetCode Mobile UX Redesign</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal for Fullscreen Image View -->
+    <div id="case-lightbox" class="case-lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close lightbox">&times;</button>
+            <img id="lightbox-img" src="" alt="Enlarged screenshot" class="lightbox-img">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Lightbox & Subnav Script -->
+    <script>
+        function openLightbox(src, caption) {
+            const lightbox = document.getElementById('case-lightbox');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            img.src = src;
+            cap.textContent = caption || '';
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(e) {
+            const lightbox = document.getElementById('case-lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Active Subnav scroll highlight
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const subLinks = document.querySelectorAll('.subnav-link');
+            let scrollY = window.scrollY;
+
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 120;
+                const sectionId = current.getAttribute('id');
+
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    subLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + sectionId) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
